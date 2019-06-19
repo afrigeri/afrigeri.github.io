@@ -33,6 +33,12 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+			
+			
+		<style type="text/css">
+			.reveal p { font-size: .8em; }
+		</style>
+			
 	</head>
 
 	<body>
@@ -42,8 +48,8 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h3>Planetary data and geoscientific map production with</h3>
-					<h1>QGIS</h1>
+					<h3>Planetary data and geoscientific map development with</h3>
+					<img class="plain" alt="QGIS" src="images/qgis-logo.png" width=300 style="background:none; border:none; box-shadow:none;"/>
 					<h4>an hands-on tutorial</h4>
                     <h3> </h3>
 					<h4>held at the 4th Planetary Data Workshop, 18-20 June 2019, Flagstaff - AZ</h4>
@@ -51,9 +57,25 @@
 						<small><b>Alessandro Frigeri </b><br/>
 							Istituto di Astrofisica e Planetologia Spaziali<br/>
 							Istituto Nazionale di Astrofisica<br/>
+							<a href="https://osm.org/go/xcXqqQvpU-">Rome, Italy</a><br/>
 							<a href="mailto:alessandro.frigeri@inaf.it">alessandro.frigeri@inaf.it</a> / <a href="http://twitter.com/afrigeri">@afrigeri</a></small>
 					</p>
 				</section>
+
+
+<section>
+<img class="plain" src="images/qgis-logo.png" width=500 style="background:none; border:none; box-shadow:none;"/> <br/>
+Development started in 2002 by Gary Sherman
+<ul>
+<li>peculiarities: GUI / Plugins / iPython interface</li>
+<li>License: <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GNU GPL</a> </li>
+<li>website:<a href="http://www.qgis.org">http://www.qgis.org</a>
+<li>development: <a href="https://github.com/qgis">http://github.com/qgis</a>
+</ul>
+
+
+
+</section>
 
 <section data-markdown>
 ## Where we have left?
@@ -62,55 +84,37 @@
 
 QGIS was at:
 
- * current stable: 2.8.2, upcoming: 2.10
+ * stable realease: 2.8.2, upcoming: 2.10
  * platforms: GNU/Linux - OS X - MS Windows
 
 
-web: [http://www.qgis.org](http://www.qgis.org)
+
 
 </section>
 	
 
 <section data-markdown>
-## Where we are?
+## Where are we today?
 
-4nd PDW in Flagstaff, June 2019
+4nd PDW in Flagstaff, June 19th 2019
 
 QGIS is at:
-
- * Stable release: QGIS 3.6.3 'Noosa' released on 17.05.2019 
- * QGIS 3.4.8 'Madeira' Long Term Repositories (LTR)
- * platforms: GNU/Linux - OS X - MS Windows - <b>Android (QField)</b>
- * Currently in feature freeze preceeding the release of QGIS 3.8
- * GRASS modules can be acessed completely from the QGIS' GUI
+ * Stable: QGIS 3.6.3 'Noosa' (17.05.2019) 
+ * LTR: QGIS 3.4.8 'Madeira'
+ * GNU/Linux - OS X - MS Windows - <b>Android (QField)</b>
+ * Upcoming v3.8 (now feature freezing)
+ * GRASS modules accessible from the QGIS GUI
 
 web: [http://www.qgis.org](http://www.qgis.org)
 
 </section>
 	
 			
-<section data-markdown>
-## QGIS
 
-
-
-Development started in 2002 by Gary Sherman
-
-peculiarities: GUI / Plugins / iPython interface
-
-License: GNU GPL 
-
-current stable: 2.8.2, upcoming: 2.10
-
-platforms: GNU/Linux - OS X - MS Windows
-
-web: [http://www.qgis.org](http://www.qgis.org)
-
-</section>
 
 
 <section data-markdown>
-## Built-in OGC services
+# Built-in OGC services
 
 OGC services accessible from QGIS:  	
 
@@ -121,12 +125,83 @@ OGC services accessible from QGIS:
  * Web Map Service (WMS)
 </section>
 
-<section data-markdown>
-## QGIS is a project within OSGEO umbrella
+<section>
+<h4>QGIS is a project within OSGEO</h4>
 
-The [Open Geospatial Foundation (OSGeo)](https://en.wikipedia.org/wiki/Open_Source_Geospatial_Foundation) is a non-profit non-governmental organization whose mission is to __support__ and __promote__ the __collaborative development__ of __open geospatial technologies__ and __data__.
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Open_Source_Geospatial_Foundation_%28logo%29.svg/1200px-Open_Source_Geospatial_Foundation_%28logo%29.svg.png" width="50px"/>
+<img class="plain" src="images/qgis-logo.png" width=200 style="background:none; border:none; box-shadow:none;"/> <br/>
+<img class="plain" src="https://www.osgeo.org/wp-content/uploads/osgeo-logo-rgb.png" width=200 style="background:none; border:none; box-shadow:none;"/></br>
 
+The <a href=https://en.wikipedia.org/wiki/Open_Source_Geospatial_Foundation>Open Geospatial Foundation (OSGeo)</a> is a non-profit non-governmental organization whose mission is to <i>support</i> and <i>promote</i> the <i>collaborative development</i> of <i>open geospatial technologies</i> and <i>data</i>.
+
+</section>
+
+<section>
+	<h4>QGIS for planetary data handling</h4>
+	<h5>and</h5>
+	<h4><u>Planetary geoscientific mapping</u></h4>	
+</section>	
+
+<section>
+	<h4>QGIS for planetary mapping</h4>
+    <ol>		 
+    <li>digitizing plugins (streaming, graphical tablet)</li>
+	<li>symbology</li>
+	<li>Crater count tool</li>   
+    </ol>
+</section>	
+
+
+<section>
+	<h4>Digitizing with beePen plugin</h4>
+	<p><a href="https://plugins.qgis.org/plugins/beePen/">BeePen plug-in</a> by Mauro Alberti</p>
+	<img class="plain" src="images/beepen.png" width=80% style="background:none; border:none; box-shadow:none;"/> 
+	<p>latest version implements smoothing + simplify chain</p>
+</section>	
+
+<section>
+	<h4>Digitizing with bezier plugin</h4>
+	<p><a href="https://plugins.qgis.org/plugins/BezierEditing/">Bezier Editing</a> by Takayuki Mizutani</p>
+	<img class="plain" src="images/bezier.png" width=80% style="background:none; border:none; box-shadow:none;"/> 
+	<p>works directly on exisitng vector layers</p>
+</section>	
+
+
+<section>
+	<h4>Circle Craters Plugin</h4>
+	<p>Provides a 3-point crater digitizing tool in QGIS, exporting the data into a <a href="https://www.geo.fu-berlin.de/en/geol/fachrichtungen/planet/software/craterstats.html">Craterstat</a> (Michael et al, 2013) compatible file</p>
+    <ol>		 
+    <li>Developed for QGIS 2.6 by Sarah Braden</li>
+	    <ul> 
+			<li>LPSC 2015 <a href="https://www.hou.usra.edu/meetings/lpsc2015/pdf/1816.pdf"> abstract #1816</a>,<a href="https://www.hou.usra.edu/meetings/lpsc2015/eposter/1816.pdf">e-poster</a></li>
+		</ul>	
+	<li>ported to Python3 / QGis 3.6</li>
+	    <ul>
+			<li><a href="https://doi.org/10.1016/j.icarus.2018.08.015">The Geology of Nawish quadrangle of Ceres (Frigeri et al, 2018) </a></li>
+			<li>testing on <a href=https://github.com/afrigeri/circle-craters>circle-craters</a>
+		</ul>  
+    </ol>
+</section>	
+
+
+
+<section>
+	<h4>Circle Craters Plugin in action (QGIS 3.6)</h4>
+	<img class="plain" src="images/circle_craters_gui.png" width=80% style="background:none; border:none; box-shadow:none;"/> <br/>
+</section>	
+
+<section>
+	<h4>Circle Craters: output from Craterstat</h4>
+	<img class="plain" src="images/paper_fig2.jpg" width=30% style="background:none; border:none; box-shadow:none;"/> <br/>
+</section>	
+
+<section>
+<h4>Geologic symbols lib and design for QGIS</h4>
+
+<img src="images/symbols.png"></img>
+
+Users can download the existing library and contribute with currently missing symbols<br/>
+
+<a href=https://github.com/afrigeri/geologic-symbols-qgis>https://github.com/afrigeri/geologic-symbols-qgis</a>
 </section>
 
 <section>
@@ -142,10 +217,11 @@ made in <strike>Italy</strike> QGIS3!
 
 <section>
 
-<h4>Data download</h4>
+<h4>Gis Data download</h4>
 
 <a href=https://github.com/afrigeri/nawish_gis/raw/master/data/raster/dtm.tif>DTM download</a><br/>
-<a href=https://github.com/afrigeri/nawish_gis/raw/master/data/raster/image_mosaic.tif>Image mosaic download</a><br/><br/><br/>
+<a href=https://github.com/afrigeri/nawish_gis/raw/master/data/raster/image_mosaic.tif>Image mosaic download</a><br/>
+<a href=https://github.com/afrigeri/nawish_gis/raw/master/data/vector/cc/craters_gt4km.gpkg>Craters > 4km</a><br/><br/><br/>
 
 full GIS dataset can be found here: <a href="https://github.com/afrigeri/nawish_gis">https://github.com/afrigeri/nawish_gis</a>
 
