@@ -42,20 +42,57 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h3>Planetary data with</h3>
-					<h1>GRASS GIS & QGIS</h1>
+					<h3>Planetary data and geoscientific map production with</h3>
+					<h1>QGIS</h1>
 					<h4>an hands-on tutorial</h4>
                     <h3> </h3>
-					<h4>held at the 2nd Planetary Data Workshop, 9-11 June 2015, Flagstaff - AZ</h4>
+					<h4>held at the 4th Planetary Data Workshop, 18-20 June 2019, Flagstaff - AZ</h4>
 					<p>
-						<small><a href="mailto:alessandro.frigeri@iaps.inaf.it">Alessandro Frigeri</a> / <a href="http://twitter.com/afrigeri">@afrigeri</a></small>
+						<small><b>Alessandro Frigeri </b><br/>
+							Istituto di Astrofisica e Planetologia Spaziali<br/>
+							Istituto Nazionale di Astrofisica<br/>
+							<a href="mailto:alessandro.frigeri@inaf.it">alessandro.frigeri@inaf.it</a> / <a href="http://twitter.com/afrigeri">@afrigeri</a></small>
 					</p>
 				</section>
 
-				
+<section data-markdown>
+## Where we have left?
+
+2nd PDW in Flagstaff, 2015
+
+QGIS was at:
+
+ * current stable: 2.8.2, upcoming: 2.10
+ * platforms: GNU/Linux - OS X - MS Windows
+
+
+web: [http://www.qgis.org](http://www.qgis.org)
+
+</section>
+	
 
 <section data-markdown>
+## Where we are?
+
+4nd PDW in Flagstaff, June 2019
+
+QGIS is at:
+
+ * Stable release: QGIS 3.6.3 'Noosa' released on 17.05.2019 
+ * QGIS 3.4.8 'Madeira' Long Term Repositories (LTR)
+ * platforms: GNU/Linux - OS X - MS Windows - <b>Android (QField)</b>
+ * Currently in feature freeze preceeding the release of QGIS 3.8
+ * GRASS modules can be acessed completely from the QGIS' GUI
+
+web: [http://www.qgis.org](http://www.qgis.org)
+
+</section>
+	
+			
+<section data-markdown>
 ## QGIS
+
+
 
 Development started in 2002 by Gary Sherman
 
@@ -71,81 +108,68 @@ web: [http://www.qgis.org](http://www.qgis.org)
 
 </section>
 
+
 <section data-markdown>
-## GRASS GIS
+## Built-in OGC services
 
-Development started in 80’s - USA CERL
+OGC services accessible from QGIS:  	
 
-peculiarities: GUI / Plugins / Scripting: bash, python
+ * Catalogue Service for the Web (CSW)
+ * Web Coverage Service (WCS)
+ * Web Feature Service (WFS)
+ * Web Feature Service - Transactional (WFS-T)
+ * Web Map Service (WMS)
+</section>
 
-License: GNU GPL 
+<section data-markdown>
+## QGIS is a project within OSGEO umbrella
 
-current stable version: 7.0
-
-platforms: GNU/Linux - OS X - MS Windows 
-
-website: [http://grass.osgeo.org](http://grass.osgeo.org)
+The [Open Geospatial Foundation (OSGeo)](https://en.wikipedia.org/wiki/Open_Source_Geospatial_Foundation) is a non-profit non-governmental organization whose mission is to __support__ and __promote__ the __collaborative development__ of __open geospatial technologies__ and __data__.
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Open_Source_Geospatial_Foundation_%28logo%29.svg/1200px-Open_Source_Geospatial_Foundation_%28logo%29.svg.png" width="50px"/>
 
 </section>
 
 <section>
-<iframe width="600" height="500" src="http://av.getinfo.de/player/12963" frameborder="0" allowfullscreen></iframe>
-<p>Video about GRASS GIS from 1987, narrated by William Shatner<br/> <a href="http://dx.doi.org/10.5446/12963">http://dx.doi.org/10.5446/12963</a></p>
+<h4>Data comes from</h4>	
+<img src="images/nawish_paper1.png" width=75%>
+<a href="https://doi.org/10.1016/j.icarus.2018.08.015">https://doi.org/10.1016/j.icarus.2018.08.015</a>
 </section>
 
-                                        <section>
-                                                <h2>GRASS-ISIS3 integration 1/2</h2>
-						<p>paper: <a href="http://www.sciencedirect.com/science/article/pii/S0032063310003685?np=y">A working environment for digital planetary data processing and mapping using ISIS and GRASS GIS</a>
-<img height=300 src="http://ars.els-cdn.com/content/image/1-s2.0-S0032063310003685-gr2.jpg"/>                             </p>   
+<section>
+<img src="images/geomap.png" width=50%/><br/>
+made in <strike>Italy</strike> QGIS3!
 </section>
 
-					<section>
-						<h2>GRASS-ISIS3 integration 2/2</h2>
-						<img height=400 data-src="http://grasswiki.osgeo.org/w/images/thumb/Chan1m32isis_Isis_GRASS_Menu.png/569px-Chan1m32isis_Isis_GRASS_Menu.png"/>
-					
-						<p>ISIS commands into GRASS7 GUI, by <a href="http://wiki.osgeo.org/wiki/Yann_Chemin">Yann Chemin</a></p> 
-				</section>
-				
-                
-				<section>
-					<h2>Goals of this tutorial</h2>
-					<ul>
-                        <li>Have the software installed - understand the licensing system</li>
-                        <li>Have the data imported into the software, and then:</li>
-                            <ul>
-                                <li>visualize data
-                                <li>colorize a dtm
-                                <li>process a dtm                                    
-                            </ul>
-                    </ul>
-						
-				</section>
-                
+<section>
+
+<h4>Data download</h4>
+
+<a href=https://github.com/afrigeri/nawish_gis/raw/master/data/raster/dtm.tif>DTM download</a><br/>
+<a href=https://github.com/afrigeri/nawish_gis/raw/master/data/raster/image_mosaic.tif>Image mosaic download</a><br/><br/><br/>
+
+full GIS dataset can be found here: <a href="https://github.com/afrigeri/nawish_gis">https://github.com/afrigeri/nawish_gis</a>
+
+</section>
+
+
 <section data-markdown>
-### GRASS and QGIS compared    
-    
-| Feature        | QGIS           | GRASS  |
-| ------------- |:-------------:| -----:|
-| GUI           | yes | yes |
-| CLI | python shell | yes |
-| Planetary CRS/SRS | yes | yes |
-| on-the-fly re-projection      | yes      |   no |
-| bash scripting | no      |    yes |
-| python scripting | yes | yes |
-| Import/Export | [GDAL](http://www.gdal.org) | GDAL+internal |
+https://github.com/afrigeri/geologic-symbols-qgis
 </section>
 
 <section data-markdown>
-### Software Installation
-
-* Licensing: meaning
-* Platform support 
-* VMs
- * (OSGeo live)[http://live.osgeo.org]
- * (ESAC GIS 2015 VM - QGis and data: password: hrsc0001)[http://gislab.esac.esa.int/esacgis2015/qgis-vm.tar] 
-
-    
+	
+https://github.com/afrigeri/circle-craters
 </section>
+
+<section data-markdown>
+https://doi.org/10.1016/j.icarus.2018.08.015
+https://ars.els-cdn.com/content/image/1-s2.0-S0019103516308132-mmc3.docx
+</section>
+
+<section data-markdown>
+	</section>
+
+
 
                 
                 
