@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" >
+
+<section data-background="images/geologic_map_background.png">
+                                        <h3> A workflow for earth and planetary geologic mapping in the digital domain</h3>
+                                        
+                                        <h5>2nd Planetary Mapping and Virtual Observatory Workshop<br/>
+1-3 July 2019, <a href="https://osm.org/go/0BM6kwF_B-?m=&relation=951328">Domaine de St. Paul, Saint-Rémy-lès-Chevreuse</a>, France
+</h5>
+                                        <p>
+                                                <small><b>Alessandro Frigeri </b><br/>
+                                                        Istituto di Astrofisica e Planetologia Spaziali - IAPS<br/>
+                                                        Istituto Nazionale di Astrofisica - INAF<br/> 
+                                                        <a href="https://osm.org/go/xcXqqQvpU-">Rome, Italy</a><br/>
+                                                        <a href="mailto:alessandro.frigeri@inaf.it">alessandro.frigeri@inaf.it</a> / <a href="http://twitter.com/afrigeri">@afrigeri</a></small>
+                                        </p>
+                                </section>
+
+
+
+
+                <section style="text-align: center;" data-background="images/geologic_map_background.png">
+                    <h2>Interpretative mapping</h2>
+                    
+                    <p class="stretch" style="text-align: center;">
+                    <img height="70%"  class="fragment fade-in" data-src="images/a.png" style="position:absolute; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+                    <img height="70%" class="fragment fade-in" data-src="images/b.png" style="position:absolute; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+                    <img height="70%" class="fragment current-visible" data-src="images/c.png" style="position:absolute; left: 0; right:0 ; margin-left: auto; margin-right: auto;" />
+                    </p>
+
+                </section>
+
+
+                <section data-background="images/geologic_map_background.png">
+                    <h2>Interpretative mapping and remote sensing </h2>
+                    <p style="text-align: left">
+                        Intrpretation of features from  <i>basemaps</i>
+                    </p>
+                    <ul>
+                        <li class="fragment">in the digital domain, we need:
+                            <ul>
+                                <li class="fragment">Spatial registration of dataset</li>
+                                <li class="fragment">Information stacking</li>
+                                <li class="fragment">Data interactivity (I/O)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="fragment" style="text-align: left">
+                        Geographic Information Systems offer this environment
+                    </p>
+                </section>
+
+                <section data-background="images/geologic_map_background.png">
+                    <h2>The geologic map in a GIS</h2>
+                    <p style="text-align: left">
+                        Elements:
+                    </p>
+                    <ul>
+                                <li class="fragment">Data interoperability</li>
+                                <li class="fragment">Digitizing</li>
+                                <li class="fragment">Graphical rendering (symbology) </li>
+                    </ul>
+                </section>
+
+
+
+                <section data-background="images/geologic_map_background.png">
+                    <h2>Data models</h2>
+                    <p style="text-align: left">
+                    There are two different GIS data models for editing/storing vector data
+                    </p>
+
+                            <ol>
+                                <li>Eulerian mode: node/boundary</li>
+                                <li>Points/line/polygon model</li>
+                            </ol>
+
+                    </ul>
+                </section>
+
+
+                <section data-background="images/geologic_map_background.png">
+                    <h2>Eulerian</h2>
+
+ <img height="auto" width="50%"  class="fragment fade-out" data-src="images/eulerian.png" style="position:relative; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+
+                    <p style="text-align: right">
+                    from Frigeri et al., 2004
+                    </p>
+                </section>
+
+
+                <section data-background="images/geologic_map_background.png">
+                    <h2>Point/line/polygon</h2>
+
+ <img height="auto" width="80%"  class="fragment fade-out" data-src="images/qgis_geo.png" style="position:relative; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+
+                    <p style="text-align: right">
+                    </p>
+                </section>
+
+
+                <section data-background="images/geologic_map_background.png">
+                    <h2>Poster!</h2>
+
+                    <ul>
+                                <li>Which is the best model?</li>
+                                <li>What are the software/tools available?</li>
+                                <li>Is there some tool still needed?</li>
+                    </ul>
+
+                    <p style="text-align: left">
+                    discussion is open at the poster session! 
+                    <b>alessandro.frigeri@inaf.it</b>
+                    </p>
+
+
+                </section>
+
+
+
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
