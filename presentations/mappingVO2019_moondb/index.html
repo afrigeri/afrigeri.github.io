@@ -26,11 +26,13 @@
 		<div class="reveal">
 			<div class="slides" >
 
-<section data-background="images/geologic_map_background.png">
-                                        <h3> A workflow for earth and planetary geologic mapping in the digital domain</h3>
+<section data-background="images/bg_apollo_dark.jpg">
+                                        <h3> The Python Interface to the MoonDB lunar sample database</h3>
+										
+										<img  data-src="images/hand.gif" height="20%" width="20%"  style="position:relative; bottom: 00; left: 0; right:0 ; margin-left: auto; margin-right: auto;border: 0;"/>
                                         
-                                        <h5>2nd Planetary Mapping and Virtual Observatory Workshop<br/>
-1-3 July 2019, <a href="https://osm.org/go/0BM6kwF_B-?m=&relation=951328">Domaine de St. Paul, Saint-Rémy-lès-Chevreuse</a>, France
+                                        <h5>2nd Planetary Mapping and V.O. Workshop<br/>
+1-3 July 2019<br/> <a href="https://osm.org/go/0BM6kwF_B-?m=&relation=951328">Domaine de St. Paul, Saint-Rémy-lès-Chevreuse</a> France
 </h5>
                                         <p>
                                                 <small><b>Alessandro Frigeri </b><br/>
@@ -44,94 +46,112 @@
 
 
 
-                <section style="text-align: center;" data-background="images/geologic_map_background.png">
-                    <h2>Interpretative mapping</h2>
+                <section style="text-align: center;" data-background="images/bg_apollo_dark.jpg">
+                    <h2>Lunar samples in their 50's</h2>
                     
-                    <p class="stretch" style="text-align: center;">
-                    <img height="70%"  class="fragment fade-in" data-src="images/a.png" style="position:absolute; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
-                    <img height="70%" class="fragment fade-in" data-src="images/b.png" style="position:absolute; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
-                    <img height="70%" class="fragment current-visible" data-src="images/c.png" style="position:absolute; left: 0; right:0 ; margin-left: auto; margin-right: auto;" />
-                    </p>
+
+                    <img  data-src="images/lunar_sample.jpg" height="auto" width="50%"  style="position:relative; bottom: 50; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+                 
+
 
                 </section>
 
 
-                <section data-background="images/geologic_map_background.png">
-                    <h2>Interpretative mapping and remote sensing </h2>
-                    <p style="text-align: left">
-                        Intrpretation of features from  <i>basemaps</i>
-                    </p>
+                <section data-background="images/bg_apollo_dark.jpg">
+                    <h2>The MoonDB</h2>
+                    
+	
+
+				    <blockquote cite="http://www.moondb.org">
+				      MoonDB is a data system that (re-)stores and synthesizes <i>historical</i> and <i>new</i> geochemical and petrological data of lunar samples collected during the Apollo missions to maximize their impact on future scientific studies.
+				    </blockquote>
+                <p class="fragment" style="text-align: left">
+                    MoonDB started in 2015 by Dothery Earth Laboratoyry and Goddard: <a href="">http://www.ict.inaf.it/gitlab/alessandro.frigeri/pymoondb</a>
+                </p>
+									
+					  </section>
+					
+    <section data-background="images/bg_apollo_dark.jpg">
+        <h2>PyMoonDB</h2>					
+					
                     <ul>
-                        <li class="fragment">in the digital domain, we need:
+                        <li class="fragment">Developed at <a href="http://www.iaps.inaf.it">INAF/IAPS</a> in Rome, PyMoonDB offers:
                             <ul>
-                                <li class="fragment">Spatial registration of dataset</li>
-                                <li class="fragment">Information stacking</li>
-                                <li class="fragment">Data interactivity (I/O)</li>
+                                <li class="fragment">A Python3 interface to the entire MoonDB data</li>
+                                <li class="fragment">An OO modeling for structured queries</li>
+                                <li class="fragment">An interface to geospatial environment</li>
                             </ul>
                         </li>
                     </ul>
                     <p class="fragment" style="text-align: left">
-                        Geographic Information Systems offer this environment
+                        PyMoonDB software and development is online at: <a href="http://www.ict.inaf.it/gitlab/alessandro.frigeri/pymoondb">http://www.ict.inaf.it/gitlab/alessandro.frigeri/pymoondb</a>
                     </p>
                 </section>
 
-                <section data-background="images/geologic_map_background.png">
-                    <h2>The geologic map in a GIS</h2>
+                <section data-background="images/bg_apollo_dark.jpg">
+                    <h2>The data model</h2>
                     <p style="text-align: left">
-                        Elements:
+                        MoonDB mosst relevant classes are:
                     </p>
                     <ul>
-                                <li class="fragment">Data interoperability</li>
-                                <li class="fragment">Digitizing</li>
-                                <li class="fragment">Graphical rendering (symbology) </li>
+                                <li class="fragment">The specimen</li>
+                                <li class="fragment">The analysis</li>
+                                <li class="fragment">The analytes</li>
                     </ul>
                 </section>
 
 
 
-                <section data-background="images/geologic_map_background.png">
-                    <h2>Data models</h2>
-                    <p style="text-align: left">
-                    There are two different GIS data models for editing/storing vector data
-                    </p>
+                <section data-background="images/bg_apollo_dark.jpg">
+                    <h2>The specimen</h2>
+                    
+					<img  data-src="images/specimen_12023.png" height="auto" width="50%"  style="position:relative; bottom: 50; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+                </section>
 
-                            <ol>
-                                <li>Eulerian mode: node/boundary</li>
-                                <li>Points/line/polygon model</li>
-                            </ol>
-
-                    </ul>
+                <section data-background="images/bg_apollo_dark.jpg">
+                    <h2>The sub-specimens</h2>
+                    
+					<img  data-src="images/12024_children_photo.png" height="10%" width="40%"  style="position:relative; bottom: 00; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+					<img  data-src="images/12024_children.png" height="10%" width="40%"  style="position:relative; bottom: 00; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
                 </section>
 
 
-                <section data-background="images/geologic_map_background.png">
-                    <h2>Eulerian</h2>
-
- <img height="auto" width="50%"  class="fragment fade-out" data-src="images/eulerian.png" style="position:relative; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
-
-                    <p style="text-align: right">
-                    from Frigeri et al., 2004
-                    </p>
+                <section data-background="images/bg_apollo_dark.jpg">
+                    <h2>The analysis</h2>
+                    
+					<img  data-src="images/analysis.png" height="auto" width="50%"  style="position:relative; bottom: 50; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
                 </section>
 
 
-                <section data-background="images/geologic_map_background.png">
-                    <h2>Point/line/polygon</h2>
 
- <img height="auto" width="80%"  class="fragment fade-out" data-src="images/qgis_geo.png" style="position:relative; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+        <section data-background="images/bg_apollo_dark.jpg">
+            <h2>The landmark</h2>
+            
+			<img  data-src="images/the_landmark.png" height="auto" width="50%"  style="position:relative; bottom: 50; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+        </section>
+        
 
-                    <p style="text-align: right">
-                    </p>
-                </section>
+        <section data-background="images/bg_apollo_dark.jpg">
+            <h2>Scripts: Example 1</h2>
+            
+			<img  data-src="images/the_landmark.png" height="auto" width="50%"  style="position:relative; bottom: 50; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+        </section>
+
+        <section data-background="images/bg_apollo_dark.jpg">
+            <h2>Jupyter notebooks</h2>
+            
+			<img  data-src="images/jupyter.png" height="auto" width="65%"  style="position:relative; bottom: 50; left: 0; right:0 ; margin-left: auto; margin-right: auto;"/>
+        </section>
 
 
-                <section data-background="images/geologic_map_background.png">
-                    <h2>Poster!</h2>
+
+                <section data-background="images/bg_apollo_dark.jpg">
+                    <h2>at the poster booth</h2>
 
                     <ul>
-                                <li>Which is the best model?</li>
-                                <li>What are the software/tools available?</li>
-                                <li>Is there some tool still needed?</li>
+                                <li>Might PyMoonDB be useful to your research?</li>
+                                <li>Possible query design</li>
+                                <li>Future developments</li>
                     </ul>
 
                     <p style="text-align: left">
