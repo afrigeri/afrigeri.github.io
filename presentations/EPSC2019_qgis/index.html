@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>QGIS in Planetary Research</title>
+
+		<meta name="description" content="an hands-on tutorial">
+	        <meta name="description" content="EPSC Geneve 2019">
+		<meta name="author" content="Alessandro Frigeri">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+			
+			
+		<style type="text/css">
+			.reveal p { font-size: .8em; }
+		</style>
+			
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3></h3>
+					<img class="plain" alt="QGIS" src="images/qgis-logo.png" width=300 style="background:none; border:none; box-shadow:none;"/>
+					<h4>for the Planetary Scientist</h4>
+                    <h3> </h3>
+					<h4>held at the <a href="https://meetingorganizer.copernicus.org/EPSC-DPS2019/session/34632">OpenPlanetary Data Cafe</a>, EPSC 2019 15-20 September 2019, Geneve - Switzerland</h4>
+					<p>
+						<small><b>Alessandro Frigeri </b><br/>
+							Istituto di Astrofisica e Planetologia Spaziali - IAPS<br/>
+							Istituto Nazionale di Astrofisica - INAF<br/> 
+							<a href="https://osm.org/go/xcXqqQvpU-">Rome, Italy</a><br/>
+							<a href="mailto:alessandro.frigeri@inaf.it">alessandro.frigeri@inaf.it</a> / <a href="http://twitter.com/afrigeri">@afrigeri</a></small>
+					</p>
+				</section>
+
+
+<section>
+<img class="plain" src="images/qgis-logo.png" width=500 style="background:none; border:none; box-shadow:none;"/> <br/>
+Development started in 2002 by Gary Sherman
+<ul>
+<li>peculiarities: GUI / Plugins / iPython interface</li>
+<li>License: <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GNU GPL</a> </li>
+<li>website:<a href="http://www.qgis.org">http://www.qgis.org</a>
+<li>development: <a href="https://github.com/qgis">http://github.com/qgis</a>
+<li>support through <a href="https://www.qgis.org/en/site/about/sponsorship.html" target="_blank">multi-sponsorship</a>
+</ul>
+
+
+
+</section>
+
+
+
+<section data-markdown>
+## QGIS, today
+
+QGIS is at:
+ * Stable: QGIS 3.8.2 'Zanzibar' (16.08.2019) 
+ * LTR: QGIS 3.4.11 'Madeira'
+ * GNU/Linux - OS X - MS Windows - <b>Android (QField)</b>
+ * GRASS, Saga, OTB modules accessible from the QGIS GUI
+</section>
+	
+
+<section>
+<h4>QGIS is a project within OSGEO</h4>
+
+<img class="plain" src="images/qgis-logo.png" width=200 style="background:none; border:none; box-shadow:none;"/> <br/>
+<img class="plain" src="https://www.osgeo.org/wp-content/uploads/osgeo-logo-rgb.png" width=200 style="background:none; border:none; box-shadow:none;"/></br>
+
+The <a href=https://en.wikipedia.org/wiki/Open_Source_Geospatial_Foundation>Open Geospatial Foundation (OSGeo)</a> is a non-profit non-governmental organization whose mission is to <i>support</i> and <i>promote</i> the <i>collaborative development</i> of <i>open geospatial technologies</i> and <i>data</i>.
+
+</section>	
+	
+	
+	
+<section>	
+<h4>QGIS Features useful to planetary scientist</h4>
+
+<ul>
+ <li> OGC Web-Services: WMS, WFS(-T), CSW, WCS</li>
+ <li> (Planetary) geologic mapping capabilities</li>
+     <ul>
+		 <li>Stream digitizing</li>
+		 <li>Geologic symbology available</li>
+		 <li>Printproof: legends, grids, scales</li> 
+     <ul>
+ <li>Planetary Data System v4 import (through GDAL library).
+</ul> 
+</section>			
+
+<section>
+<h4>OWS support in QGIS</h4>
+
+USGS WMS basemaps
+<img class="plain" src="images/OWS.png" width=80% style="background:none; border:none; box-shadow:none;"/> <br/>
+
+</section>
+
+<section>
+<h4>Geologic mapping</h4>
+<img src="images/geomap.png" width=50%/><br/>
+e.g. <a href="https://doi.org/10.1016/j.icarus.2018.08.015">DOI:10.1016/j.icarus.2018.08.015</a>
+</section>
+
+<section>
+	<h4>Crater mapping/statistics</h4>
+	<img class="plain" src="images/circle_craters_gui.png" width=60% style="background:none; border:none; box-shadow:none;"/> 
+	<img class="plain" src="images/paper_fig2.jpg" width=25% style="background:none; border:none; box-shadow:none;"/> <br/><br/>
+</section>	
+
+
+<section>
+<h4>PDS4 support in QGIS</h4>
+<h5>CaSSIS data from PSA and in QGIS</h5>
+
+Step one: Select data from PSA (or PDS)	
+<img class="plain" src="images/psa1.png" width=80% style="background:none; border:none; box-shadow:none;"/> <br/>
+
+</section>
+
+<section>
+<h4>PDS4 support in QGIS</h4>
+<h5>CaSSIS data from PSA and in QGIS</h5>
+
+Step two: Dowload data from PSA (or PDS)	
+<img class="plain" src="images/psa2.png" width=80% style="background:none; border:none; box-shadow:none;"/> <br/>
+
+</section>
+
+<section>
+<h4>PDS4 support in QGIS</h4>
+<h5>CaSSIS data from PSA and in QGIS</h5>
+
+Step three: Visualize PDS4 image data in QGIS 
+<img class="plain" src="images/cassis_in_qgis.png" width=80% style="background:none; border:none; box-shadow:none;"/> <br/>
+
+</section>
+
+
+
+<section>
+<h4>Entry point for updates/discussion<h4>
+ 
+<p>A thread on 
+<a href="https://forum.openplanetary.org/t/qgis-for-planetary-mapping/134">QGIS for planetary mapping</a> has been opened on the <a href="https://forum.openplanetary.org">openplanetary.org forum</a></p>
+</section>
+
+<section>
+<h4>Acknowledgements</h4>		
+<p>A special thanks goes to the all the QGIS/FOSS4G developers, contributors and sponsors, and planetary data users testing these tools!</p>
+</section>
+
+
+<section>
+
+
+<h4>that's it!<h4>
+	<p>... and that's only the beginning!</p>
+
+<p>Audience: demo of paricular aspect? Questions?</p>
+
+</section>	
+	
+                
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
