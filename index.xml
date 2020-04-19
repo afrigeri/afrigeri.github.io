@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GIS Lab at INAF IAPS</title>
-    <link>http://afrigeri.github.io/website/</link>
+    <link>http://afrigeri.github.io/gislab-iaps/</link>
     <description>Recent content on GIS Lab at INAF IAPS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://afrigeri.github.io/website/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://afrigeri.github.io/gislab-iaps/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
